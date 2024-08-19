@@ -106,6 +106,25 @@
           padding: 150px 275px 150px 125px;
           font-size: 35px;
         }
+.nav-links a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links a:visited {
+  text-decoration: none;
+  color: black;
+}
+.book-button a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.book-button a:visited {
+  text-decoration: none;
+  color: white;
+}
+
         </style>
 </head>
 <body>
@@ -121,9 +140,9 @@
                 Certified Life Coach
               </div>
               <ul class="nav-links">
-                <li>Home</li>
-                <li>Services</li>
-                <li>About Me</li>
+                <a href="index.html"><li>Home</li></a>
+                <a href="services.html"><li>Services</li></a>
+                <a href="aboutMe.html"><li>About Me</li></a>
               </ul>
             </nav>
           </header>
@@ -157,7 +176,7 @@
                   <div class="consultation-container">
                     <p class="consultation-title">What are you Searching for?</p>
                     <p class="consultation-description">Complementary 20 minute consult!</p>
-                    <button class="book-button">Book here</button>
+                    <button class="book-button"><a href="/book">Book here</a></button>
                   </div>
                 </div>
               </div>
