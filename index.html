@@ -7,185 +7,65 @@
     <link href='https://fonts.googleapis.com/css?family=Lovers Quarrel' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nanum Myeongjo' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <style>
-        .life-coach-section { display: flex; flex-direction: column; position: relative; min-height: 1291px; max-width: 1650; overflow: hidden; }
-        .background-image { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; }
-        .header { position: relative; background-color: rgba(247, 225, 215, 0.7); display: flex; width: 100%; flex-direction: column; color: #000; justify-content: center; padding: 2px 0; font: 400 12px Inter, sans-serif; }
-        @media (max-width: 991px) { .header { max-width: 100%; } }
-        .nav-container { display: flex; width: 100%; align-items: start; gap: 20px; flex-wrap: wrap; justify-content: space-between; padding: 25px 45px 49px 22px; background-color: #f7e1d7; }
-        @media (max-width: 991px) { .nav-container { max-width: 100%; padding: 0 20px; } }
-        .nav-links { display: flex; gap: 115px; width: 38%; font-size: 20px; list-style-type: none;}
-        .hero-section { display: flex; flex-direction: column; position: relative; min-height: 522px; align-items: center; font-family: Inter, sans-serif; color: #000; font-weight: 400; padding: 31px 80px 187px; }
-        @media (max-width: 991px) { .hero-section { max-width: 100%; padding: 0 20px 100px; } }
-        .hero-title { position: relative; font-size: 40px; font-weight: 700; align-self: start; margin-left: 40px }
-        .hero-description { position: relative; font-size: 25px; margin-top: 89px; width: 59% }
-        @media (max-width: 991px) { .hero-description { margin-top: 40px; font-style: italic; } }
-        .cta-button { position: relative; background-color: #000; width: 250px; max-width: 100%; font-size: 20px; color: #fff; margin-top: 31px; padding: 16px 42px 18px; }
-        @media (max-width: 991px) { .cta-button { margin-bottom: 10px; padding: 0 20px; } }
-        .quote-section { display: flex; flex-direction: column; position: relative; min-height: 241px; width: 100%; color: #000; padding: 42px 70px 100px; font: 400 16px Noto Music, sans-serif; }
-        @media (max-width: 991px) { .quote-section { max-width: 100%; padding: 0 20px 110px; } }
-        .services-section { position: relative; background-color: #f7e1d7; z-index: 10; padding: 30px 15px 0px 30px; height: 650px }
-        @media (max-width: 991px) { .services-section { max-width: 100%; padding: 0 20px; } }
-        .services-container { gap: 20px; display: flex; }
-        @media (max-width: 991px) { .services-container { flex-direction: column; align-items: stretch; gap: 0px; } }
-        .services-content { display: flex; flex-direction: column; line-height: normal; width: 71%; margin-left: 0px; }
-        @media (max-width: 991px) { .services-content { width: 100%; } }
-        .services-description { position: relative; display: flex; flex-grow: 1; flex-direction: column; color: #000; }
-        @media (max-width: 991px) { .services-description { max-width: 100%; margin-top: 40px; } }
-        .services-title { width: 350px; font-size: 25px; font-family:  'Montserrat',sans-serif; font-weight: 400;color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to make the text lighter */}
-
-        /* .consultation-container { align-self: end; display: flex; margin-top: 29px; width: 400px; max-width: 100%; flex-direction: column; font-weight: 400; } */
-        .consultation-container { 
-    align-self: center; /* Center the container itself if it's inside a flex parent */
-    display: flex; 
-    flex-direction: column; 
-    margin-top: 29px; 
-    width: 400px; 
-    max-width: 100%; 
-    font-weight: 400; 
-    margin-left: 150px;
-}
-/* Ensure responsiveness */
-@media (max-width: 991px) {
-    .consultation-container {
-        width: 100%; /* Ensures the container takes up the full width on smaller screens */
-    }
-}
-
-.consultation-title { 
-    font-size: 56px; 
-    font-family: 'Lovers Quarrel'; 
-    text-align: center; /* Center-aligns the text within its container */
-}
-
-@media (max-width: 991px) { 
-    .consultation-title { 
-        font-size: 40px; 
-    } 
-}
-
-.consultation-description { 
-    margin: 0px auto 0; /* Auto left/right margins center-align this element */
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: bold;
-    text-align: center; /* Center-aligns the text within its container */
-}
-
-@media (max-width: 991px) { 
-    .consultation-description { 
-        margin: 0 10px; 
-    } 
-}
-
-.book-button { 
-    background-color: #000; 
-    margin: 31px auto 0; /* Auto left/right margins center-align this element */
-    width: 271px; 
-    max-width: 100%; 
-    color: #fef8f8; 
-    padding: 16px 42px 18px; 
-    font-size: 20px;
-    font-family: 'Nanum Myeongjo', sans-serif; 
-    text-align: center; /* Center-aligns the text within the button */
-}
-
-
-        @media (max-width: 991px) { .book-button { padding: 0 20px; } }
-        .services-image-container { display: flex; flex-direction: column; line-height: normal; width: 29%; margin-left: 20px; }
-        @media (max-width: 991px) { .services-image-container { width: 100%; } }
-        .services-image { aspect-ratio: 0.59; object-fit: contain; object-position: center; width: 340px; max-width: 100%; align-self: stretch; margin: auto 0; }
-        @media (max-width: 991px) { .services-image { margin-top: 40px; } }
-        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-        @media (max-width: 991px) { .header { max-width: 100%; } }
-        .homeButton {font-size: 20px; padding: 15px }
-        .middleSection{
-          color: black;
-          z-index: 1;
-          margin: 20px 20px 20px 20px;
-          padding: 150px 275px 150px 125px;
-          font-size: 35px;
-        }
-.nav-links a:link {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-links a:visited {
-  text-decoration: none;
-  color: black;
-}
-.book-button a:link {
-  text-decoration: none;
-  color: white;
-}
-
-.book-button a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-        </style>
+    <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
 
         
-        <section class="life-coach-section">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cfd334c40491d78c17c005d1ed20b56d6834fd60fd267f89f046fd945705db5?placeholderIfAbsent=true&apiKey=03a7cc1290dc4a1abd7a1ba027aae841" alt="" class="background-image" />
-          <header class="header">
-            <nav class="nav-container">
-              <div class = "homeButton">
-                <strong>Roxy Mandisen</strong>
-                <br />
-                Certified Life Coach
-              </div>
-              <ul class="nav-links">
-                <a href="index.html"><li>Home</li></a>
-                <a href="services.html"><li>Services</li></a>
-                <a href="aboutMe.html"><li>About Me</li></a>
-              </ul>
-            </nav>
-          </header>
-          <section class="hero-section">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ea0ca03b3a15de446b14aafe9a40444086624bf189ac783d74bb493f9b0b81a?placeholderIfAbsent=true&apiKey=03a7cc1290dc4a1abd7a1ba027aae841" alt="" class="background-image" />
-            <h1 class="hero-title">Live with Intention,<br> Lead with Purpose.</h1>
-            <p class="hero-description">
-              By living with intention and leading with purpose, you can create a life that aligns with your deepest values and aspirations. Let us help you discover your true purpose and live a life of meaning and impact.
-            </p>
-            <button class="cta-button">Learn More</button>
-          </section>
-          <section class="quote-section">          
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5467584df62254120846ed03582d3a9a53c882dab8ff704764ec0681574dd78c?placeholderIfAbsent=true&apiKey=03a7cc1290dc4a1abd7a1ba027aae841" alt="" class="background-image" />
-            <p class = "middleSection">
-              Are you ready to embark on a transformative journey? Let's connect and explore how we can work together to unlock your potential and create the life you've always dreamed of.
-            </p>
-          </section>
-          <section class="services-section">
-            <div class="services-container">
-              <div class="services-content">
-                <div class="services-description">
-                  <h2 class="services-title">
-                    I help women find a life worth living and achieve their life-long goals
-                    <br />
-                    <br />
-                    &
-                    <br />
-                    <br />
-                    Relationship Coaching
-                  </h2>
-                  <div class="consultation-container">
-                    <p class="consultation-title">What are you Searching for?</p>
-                    <p class="consultation-description">Complementary 20 minute consult!</p>
-                    <button class="book-button"><a href="/book">Book here</a></button>
-                  </div>
-                </div>
-              </div>
-              <div class="services-image-container">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b49c2df88849b2e06189467d53083dd84d1f5b4d48a7762145adbabf1a385316?placeholderIfAbsent=true&apiKey=03a7cc1290dc4a1abd7a1ba027aae841" alt="Life coach services illustration" class="services-image" />
-              </div>
+        
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cfd334c40491d78c17c005d1ed20b56d6834fd60fd267f89f046fd945705db5?placeholderIfAbsent=true&apiKey=03a7cc1290dc4a1abd7a1ba027aae841" alt="" class="background-image" />
+    <header class="header">
+      <nav class="nav-container">
+        <div class = "homeButton">
+          <strong>Roxy Mandisen</strong>
+          <br />
+          Certified Life Coach
+        </div>
+        <ul class="nav-links">
+          <a href="index.html"><li>Home</li></a>
+          <a href="services.html"><li>Services</li></a>
+          <a href="aboutMe.html"><li>About Me</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <img src="./images/newImage.png" alt="" class="background-image" />
+      <h1 class="hero-title">Live with Intention,<br> Lead with Purpose.</h1>
+      <p class="hero-description">
+        By living with intention and leading with purpose, you can create a life that aligns with your deepest values and aspirations. Let us help you discover your true purpose and live a life of meaning and impact.
+      </p>
+      <button class="cta-button">Learn More</button>
+    </section>
+    <section class="quote-section">          
+      <p class = "middleSection">
+        Are you ready to embark on a transformative journey? Let's connect and explore how we can work together to unlock your potential and create the life you've always dreamed of.
+      </p>
+    </section>
+    <section class="services-section">
+      <div class="services-container">
+        <div class="services-content">
+          <div class="services-description">
+            <h2 class="services-title">
+              I help women find a life worth living and achieve their life-long goals
+              <br />
+              <br />
+              &
+              <br />
+              <br />
+              Relationship Coaching
+            </h2>
+            <div class="consultation-container">
+              <p class="consultation-title">What are you Searching for?</p>
+              <p class="consultation-description">Complementary 20 minute consult!</p>
+              <button class="book-button"><a href="bookHere.html">Book here</a></button>
             </div>
-          </section>
-        </section>
+          </div>
+        </div>
+        <div class="services-image-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b49c2df88849b2e06189467d53083dd84d1f5b4d48a7762145adbabf1a385316?placeholderIfAbsent=true&apiKey=03a7cc1290dc4a1abd7a1ba027aae841" alt="Life coach services illustration" class="services-image" />
+        </div>
+      </div>
+    </section>
 </body>
 </html>
 

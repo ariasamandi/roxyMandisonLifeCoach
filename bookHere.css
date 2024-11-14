@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevents horizontal scrolling if content overflows */
+}
+
+body{
+    background-image: url('./images/services.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Navbar styles  */
+
+.nav-container { 
+    display: flex; 
+    width: 100%; 
+    align-items: start; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding: 25px 45px 49px 22px; 
+    background-color: #F7E1D7; 
+  }
+  @media (max-width: 991px) { 
+    .nav-container { 
+        max-width: 100%; 
+        padding: 0 20px; 
+    } 
+  }
+  .nav-links { 
+    display: flex; 
+    gap: 115px; 
+    width: 38%; 
+    font-size: 20px; 
+    list-style-type: none;
+  }
+  .nav-links a:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-links a:visited {
+  text-decoration: none;
+  color: black;
+  }
+  .homeButton {
+    font-size: 20px; padding: 15px 
+  }
+  .header { 
+    position: relative; 
+    background-color: #F7E1D7; 
+    display: flex; 
+    width: 100%; 
+    flex-direction: column; 
+    color: #000; 
+    justify-content: center; 
+    padding: 2px 0; 
+    font: 400 12px Inter, sans-serif; 
+  }
+  @media (max-width: 991px) { 
+    .header { 
+        max-width: 100%; 
+    } 
+  }
+  /* Navbar styles end */
+
+.headerText{
+    max-width: fit-content;
+    margin-inline: auto;
+    font-family: 'Moul', sans-serif; 
+    font-size: 40px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.43);
+    width: 40rem; /* Adjust width as needed */
+    height: 30rem;
+    padding: 30px; /* Adds padding inside the form */
+    margin-top: 50px;
+    margin-inline: auto; /* Centers the form horizontally */
+    border: 3px solid #ccc;
+    border-radius: 10px; /* Adds rounded corners */
+}
+
+.form input {
+    background-color: #D9D9D9;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* First and second inputs on the same row */
+.form input:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center; /* Center-aligns input in its grid cell */
+}
+
+.form input:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+
+/* Third input on a new row, centered */
+.form input:nth-child(3) {
+    grid-column: 1 / span 2; /* Span across both columns */
+    grid-row: 2;
+    justify-self: center;
+    width: 80%; /* Center and set a specific width */
+}
+
+/* Fourth input on a new row, centered and larger */
+.form input:nth-child(4) {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    justify-self: center;
+    width: 90%;
+    height: 100px; /* Increase height for textarea styling */
+}
+
+
+input{
+    display: inline;
+    width: 300px;
+    background-color: #D9D9D9;
+    border: None;
+    padding: 10px;
+    margin: 10px;
+
+}
+.footer{
+    font-family: 'Moul', sans-serif; 
+    font-size: 15px;
+    margin-top: 20px;
+}
+span{
+    display: table;
+    margin: 0 auto;
+}
